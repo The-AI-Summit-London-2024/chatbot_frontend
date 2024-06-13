@@ -26,7 +26,7 @@ const UploadFile = () => {
   useEffect(() => {
     if (file != null) {
       // do fetch
-      fetch("http://127.0.0.1:9001/parsing/upload", {
+      fetch("http://0.0.0.0:9001/parsing/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const UploadFile = () => {
           summary = summary.replaceAll("*", "");
           // summary.replaceAll(/(\d+\.\s)/g, "\\n$1");
           setSummary(summary);
-          await fetch("http://127.0.0.1:9001/parsing/get_ten_q", {
+          await fetch("http://0.0.0.0:9001/parsing/get_ten_q", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
