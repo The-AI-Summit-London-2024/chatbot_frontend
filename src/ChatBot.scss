@@ -1,0 +1,162 @@
+.chatBot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+
+.chat {
+  & {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > span {
+    & {
+      display: block;
+      width: max-content;
+      max-width: 70%;
+    }
+
+    &:nth-child(1) {
+      padding: 0 5px;
+      font-size: 14px;
+    }
+
+    &:nth-child(3) {
+      padding: 0 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+.userTalk {
+  align-items: end;
+  text-align: right;
+}
+
+.botTalk {
+  align-items: start;
+}
+
+.textingIcon {
+  width: 25px;
+  margin: 20px;
+}
+
+.content {
+  padding: 5px 10px;
+  margin-top: 3px;
+  background-color: rgb(54, 70, 114);
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.questionBlock {
+  height: 250px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #000000df;
+  border-radius: 20px;
+}
+
+.optionBlock {
+  & {
+    overflow: auto;
+    height: calc(100% - 40px);
+    background: #ffffff20;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .preDefinedQ {
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    & > span {
+      & {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        min-height: 30px;
+        padding: 5px 10px;
+        border: 1px solid #ffffff;
+        border-radius: 100px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      &:hover {
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+      &:active {
+        background-color: #c8c8c8;
+        border-color: #c8c8c8;
+      }
+
+      img {
+        width: 15px;
+        transform: rotate(25deg);
+        margin-right: 2px;
+      }
+    }
+
+    .customise {
+      & {
+        border: 1px solid #a32ed6;
+        background-color: #a32ed6;
+      }
+
+      img {
+        filter: grayscale(1) brightness(3);
+      }
+    }
+  }
+}
+
+.inputBlock {
+  & {
+    display: flex;
+    gap: 3px;
+    height: 40px;
+    padding: 5px 5px 0 5px;
+    cursor: pointer;
+  }
+
+  & > input {
+    & {
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      background: #ffffff20;
+      border: none;
+      border-radius: 20px;
+      color: #ffffff;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & > img {
+    padding: 3px;
+    margin-left: 5px;
+    background-color: #ffffff20;
+    border-radius: 100%;
+  }
+}

@@ -1,0 +1,144 @@
+.goals {
+  display: flex;
+  gap: 20px;
+  width: calc(80% + 40px);
+  height: fit-content;
+  padding: 20px;
+  margin-top: 70px;
+  background: rgb(252, 230, 227);
+  border-radius: 10px;
+}
+
+.nutrition {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.element {
+  & {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    // min-width: 300px;
+    // min-width: 400px;
+    padding: 7px 0;
+  }
+
+  .range {
+    // width: 80%;
+    flex: 1;
+    min-width: 300px;
+  }
+
+  span {
+    width: 180px;
+  }
+}
+
+.operation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.uploadImage {
+  & {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #161e2f;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 35px;
+  }
+}
+
+.advice {
+  & {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 35px;
+  }
+}
+
+.uploadMeal {
+  & {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    background: #ff9085;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  input {
+    display: none;
+  }
+
+  .uploading {
+    & {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    img {
+      width: 50px;
+    }
+    // position: relative;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+
+  .finish {
+    .overview {
+      display: flex;
+
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .goals {
+    flex-wrap: wrap;
+  }
+  .operation {
+    width: 100%;
+    flex-direction: row;
+  }
+}

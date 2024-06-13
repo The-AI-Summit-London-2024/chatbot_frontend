@@ -1,0 +1,42 @@
+.uploadBlock {
+  & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 250px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border: 2.5px solid #161e2f;
+    border-style: dashed;
+    border-radius: 5px;
+    outline: 5px solid #ffffff;
+  }
+
+  .uploadButton {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      & > input {
+        display: none;
+      }
+
+      img {
+        width: 45px;
+      }
+    }
+  }
+
+  & > img {
+    width: 45px;
+  }
+}
+
+.chatBlock {
+  height: -webkit-fill-available;
+}

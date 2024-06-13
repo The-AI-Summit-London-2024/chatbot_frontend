@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3e3e57;
+  // background-color: #fcb49c;
+}
+
+.header {
+  & {
+    position: fixed;
+    width: 100vw;
+    height: 7vh;
+    z-index: 10;
+  }
+}
+
+.menu {
+  & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100vh;
+    padding: 30px 0;
+    background-color: #000000b0;
+  }
+
+  .menuController {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .option {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+.menuController {
+  display: flex;
+  height: 30px;
+  cursor: pointer;
+}

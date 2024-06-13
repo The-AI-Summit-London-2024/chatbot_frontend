@@ -1,0 +1,84 @@
+.login {
+  margin-top: 40px;
+}
+
+.logo {
+  & {
+    text-align: center;
+  }
+
+  img {
+    width: 300px;
+    margin-top: -30%;
+    margin-bottom: -10%;
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.email {
+  //   margin: 20px 0;
+}
+
+.row {
+  & {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  & > span {
+    width: 80px;
+  }
+
+  .selector {
+    width: 200px;
+    height: 30px;
+  }
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  padding: 4px 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.options {
+  & {
+    width: 200px;
+  }
+
+  span + span {
+    margin-left: 10px;
+  }
+  img {
+    width: 20px;
+    vertical-align: bottom;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  & {
+    width: 200px;
+    padding: 10px 20px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: salmon;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+}
