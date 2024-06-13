@@ -9,6 +9,7 @@ const UploadFile = () => {
   const [file, setFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState("START"); // START, UPLOADING, FINISH
   const [summary, setSummary] = useState("");
+  const [tenQ, setTenQ] = useState([]);
   const uploadRef = useRef();
 
   const readFile = (e) => {
@@ -33,8 +34,22 @@ const UploadFile = () => {
         body: JSON.stringify({ file_data: file }),
       })
         .then((response) => response.json())
-        .then((data) => {
+        .then(async (data) => {
           setSummary(data.response);
+          await fetch("http://0.0.0.0:9001/parsing/get_ten_q", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ file_path: data.file_path }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              data = data.ten_q.split("```json")[1].split("```")[0];
+              data = JSON.parse(data);
+              console.log(data);
+              setTenQ(data.map((x) => x.question));
+            });
           setUploadStatus("FINISH");
         });
       //   setTimeout(() => {
@@ -66,7 +81,9 @@ const UploadFile = () => {
             <span>Uploading...</span>
           </>
         )}
-        {uploadStatus == "FINISH" && <ChatBot summary={summary} />}
+        {uploadStatus == "FINISH" && (
+          <ChatBot summary={summary} questions={tenQ} />
+        )}
       </div>
     </div>
   );

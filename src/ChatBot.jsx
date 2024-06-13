@@ -6,25 +6,25 @@ import sendIcon from "./icon/send_icon.svg";
 import starIcon from "./icon/star_icon.svg";
 import textingIcon from "./icon/texting_icon.gif";
 
-const ChatBot = ({ summary }) => {
+const ChatBot = ({ summary, questions }) => {
   const [chatHistory, setChatHistory] = useState([summary]);
   const [inputText, setInputText] = useState("");
   const [isWaiting, setIsWaiting] = useState(false);
   const [isCustomise, setIsCustomise] = useState(false);
   const sendRef = useRef();
 
-  const questions = [
-    "What is your favorite book, and why does it resonate with you?",
-    "How do you typically spend your weekends, and what activities do you enjoy the most?",
-    "What is your dream travel destination, and what attracts you to it?",
-    "What motivates you to get out of bed every day and face the challenges ahead?",
-    "Do you have a favorite hobby, and how did you get started with it?",
-    "What is the last movie you watched, and what did you think about it?",
-    "What type of music do you enjoy the most, and do you have a favorite artist or band?",
-    "Do you prefer coffee or tea, and how do you like it prepared?",
-    "Is there a skill you’ve always wanted to learn, and why is it important to you?",
-    "What is your favorite way to relax after a long day or week, and why does it help you unwind?",
-  ];
+  // const questions = [
+  //   "What is your favorite book, and why does it resonate with you?",
+  //   "How do you typically spend your weekends, and what activities do you enjoy the most?",
+  //   "What is your dream travel destination, and what attracts you to it?",
+  //   "What motivates you to get out of bed every day and face the challenges ahead?",
+  //   "Do you have a favorite hobby, and how did you get started with it?",
+  //   "What is the last movie you watched, and what did you think about it?",
+  //   "What type of music do you enjoy the most, and do you have a favorite artist or band?",
+  //   "Do you prefer coffee or tea, and how do you like it prepared?",
+  //   "Is there a skill you’ve always wanted to learn, and why is it important to you?",
+  //   "What is your favorite way to relax after a long day or week, and why does it help you unwind?",
+  // ];
 
   const sendText = (text) => {
     setIsWaiting(true);
